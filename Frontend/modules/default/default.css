@@ -1,0 +1,97 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4; /* Light background color for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Container Styles */
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Title Styles */
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Button Styles */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Result Text Styles */
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #28a745; /* Success green */
+  font-weight: bold;
+  display: none; /* Hide result initially */
+}
+
+/* QR Code Scanner Container */
+#reader {
+  margin-top: 25px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add a frame around the QR code scanner */
+#reader canvas {
+  border: 3px solid #007bff;
+  border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}

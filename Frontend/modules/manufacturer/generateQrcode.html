@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate QR Code</title>
+    <link rel="stylesheet" href="../../common/css/base.css" />
+    <link rel="stylesheet" href="./manufacturer.css" />
+    <link rel="stylesheet" href="generateQrcode.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"
+    ></script>
+    <script defer src="../../common/components/navbar.js"></script>
+    <script defer src="./generateQrcode.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>QR Code Generator</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Generate Product QR Code</h2>
+        <form id="productForm">
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName" name="productName" required />
+
+          <label for="productDescription">Product Description:</label>
+          <textarea
+            id="productDescription"
+            name="productDescription"
+            required
+          ></textarea>
+
+          <label for="manufacturerName">Manufacturer Name:</label>
+          <input
+            type="text"
+            id="manufacturerName"
+            value="Your Manufacturer Name"
+            readonly
+          />
+
+          <label for="manufacturerAddress">Manufacturer Address:</label>
+          <textarea id="manufacturerAddress" readonly>
+Your Manufacturer Address</textarea
+          >
+
+          <label for="includeRetailer">Include Retailer Information:</label>
+          <input type="checkbox" id="includeRetailer" />
+          <div id="retailerInfo" hidden>
+            <label for="retailerName">Retailer Name:</label>
+            <input type="text" id="retailerName" />
+            <label for="retailerAddress">Retailer Address:</label>
+            <textarea id="retailerAddress"></textarea>
+          </div>
+
+          <button type="submit">Generate QR Code</button>
+        </form>
+        <div id="qrCodeOutput" hidden>
+          <h3>Generated QR Code</h3>
+          <canvas id="qrCodeCanvas"></canvas>
+          <button id="saveQrCode">Save QR Code</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

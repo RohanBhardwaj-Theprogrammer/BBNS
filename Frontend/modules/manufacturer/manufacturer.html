@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../../common/css/base.css" />
+    <link rel="stylesheet" href="./manufacturer.css" />
+    <script src="../../common/components/navbar.js"></script>
+    <script src="./manufacturer.js" defer></script>
+  </head>
+  <body>
+    <div class="WelcomeContainer">
+      <h2>Welcome to the Manufacturer Portal</h2>
+      <main id="manufacturerMainbar">
+        <!-- Create QR Code Section -->
+        <div id="generate-qr-code">
+          <h3>Generate QR Code for Product</h3>
+          <form id="product-form">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" required />
+
+            <label for="product-photo">Upload Product Image:</label>
+            <input
+              type="file"
+              id="product-photo"
+              name="product-photo"
+              accept="image/*"
+              required
+            />
+
+            <button type="submit">Generate QR Code</button>
+          </form>
+          <div id="qr-code-result"></div>
+          <button id="goToQrPage">Generate QR Code in Detail</button>
+        </div>
+
+        <!-- Previous Scanned QR Codes Section -->
+        <div id="history">
+          <h3>Previous QR Code Scans</h3>
+          <ul id="scan-history">
+            <!-- Dynamic list of past scans will be added here -->
+          </ul>
+        </div>
+
+        <!-- Sales Information Section -->
+        <div id="sales">
+          <h3>Product Sales</h3>
+          <p id="sales-count">Loading sales data...</p>
+        </div>
+
+        <!-- Edit Profile Section -->
+        <div id="edit-profile">
+          <h3>Edit Profile</h3>
+          <form id="profile-form">
+            <label for="manufacturer-name">Manufacturer Name:</label>
+            <input
+              type="text"
+              id="manufacturer-name"
+              name="manufacturer-name"
+              required
+            />
+
+            <label for="manufacturer-contact">Contact Info:</label>
+            <input
+              type="text"
+              id="manufacturer-contact"
+              name="manufacturer-contact"
+              required
+            />
+
+            <button type="submit">Update Profile</button>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <!-- Loading Spinner (Initially Hidden) -->
+    <div id="loading" class="hidden">
+      <p>Loading...</p>
+    </div>
+  </body>
+</html>

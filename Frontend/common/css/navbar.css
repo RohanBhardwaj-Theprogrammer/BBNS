@@ -1,0 +1,34 @@
+/* Mobile-First Navigation */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+}
+
+#navbar .logo {
+  font-size: 1.5rem;
+}
+
+#navbar .menu {
+  display: none; /* Initially hidden */
+}
+
+/* Hamburger Menu for Mobile */
+#navbar .menu-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Larger Screen Enhancements */
+@media (min-width: 768px) {
+  #navbar .menu {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  #navbar .menu-icon {
+    display: none; /* Hide hamburger */
+  }
+}
