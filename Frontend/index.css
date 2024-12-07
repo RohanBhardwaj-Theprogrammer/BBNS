@@ -1,0 +1,164 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Wrapper */
+.main {
+    border: solid 4px black;
+    overflow: hidden;
+}
+
+/* Header */
+.header-top {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a4a4a;
+    color: white;
+    padding: 0 20px;
+}
+
+.call, .email {
+    font-size: 14px;
+}
+
+.login{
+    margin-left: 95%;
+}
+
+.login:img {
+    transition: transform 0.3s ease;
+}
+
+.login img:hover{
+    transform: scale(1.1);
+}
+
+/* Section 1 */
+.section-part-1 {
+    background-color: skyblue;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.section-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.row-1 h1 {
+    color: #333;
+    font-size: 36px;
+}
+
+.row-2 {
+    display: flex;
+    gap: 15px;
+}
+
+.box {
+    padding: 10px 20px;
+    background-color: #007acc;
+    border-radius: 5px;
+}
+
+.box a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.box:hover {
+    background-color: #005f99;
+}
+
+/* Blockchain Technology */
+.blockchain-technology {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 20px;
+}
+
+.blockchain-technology-1 {
+    flex: 1;
+    text-align: left;
+   
+}
+
+.blockchain-technology-1 h2 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.button {
+    flex: 1;
+    text-align: center;
+}
+
+.button h3 {
+    margin-bottom: 20px;
+}
+
+.button2 {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button2:hover {
+    background-color: #e6b800;
+}
+
+.blockchain-image img {
+    border-radius: 10px;
+}
+
+/* Icons */
+.icon {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0;
+}
+
+.icon div {
+    text-align: center;
+}
+
+.icon img {
+    transition: transform 0.3s ease;
+}
+
+.icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.foot {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
+
