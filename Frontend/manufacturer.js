@@ -3,6 +3,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const qrCodeResult = document.getElementById('qr-code-result');
   const loadingSpinner = document.getElementById('loading');
 
+  // Check for MetaMask installation
+  async function checkMetaMask() {
+    if (typeof window.ethereum === 'undefined') {
+      const installMetaMask = confirm(
+        'MetaMask is not installed. Would you like to install it now?'
+      );
+      if (installMetaMask) {
+        // Redirect to MetaMask installation page
+        window.location.href = 'https://metamask.io/download.html';
+      } else {
+        alert('MetaMask is required to use this application.');
+        window.location.href = '/'; // Redirect to the default page
+      }
+      return false;
+    }
+    return true;
+  }
+
+  // Initialize MetaMask
+  async function initializeMetaMask() {
+    const isMetaMaskAvailable = await checkMetaMask();
+    if (!isMetaMaskAvailable) return;
+
+    try {
+      // Request wallet connection
+      await ethereum.request({ method: 'eth_requestAccounts' });
+    } catch (error) {
+      console.error('User denied MetaMask connection:', error);
+      alert('MetaMask connection is required to continue.');
+      window.location.href = '/'; // Redirect to the default page
+    }
+  }
+
+  // Form submission handler
   productForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -23,9 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Interact with MetaMask
+    // MetaMask initialization
+    await initializeMetaMask();
+
     try {
-      // Request wallet connection
+      // Interact with MetaMask
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
       const walletAddress = accounts[0];
 
@@ -80,4 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       loadingSpinner.classList.add('hidden');
     }
   });
+
+  // Perform MetaMask check on page load
+  checkMetaMask();
 });
