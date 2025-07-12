@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manufacturer Portal</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="manufacturer.css" />
+    <!--<script src="navbar.js"></script>-->
+    <script src="manufacturer.js" defer></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> <!-- QR Code Library -->
+  </head>
+  <body>
+    <div class="WelcomeContainer">
+      <h2>Welcome to the Manufacturer Portal</h2>
+      <main id="manufacturerMainbar">
+        <!-- Create QR Code Section -->
+        <div id="generate-qr-code">
+          <h3>Generate QR Code for Product</h3>
+          <form id="product-form">
+            <!-- Product Name -->
+            <label for="product-name">Product Name:</label>
+            <input 
+              type="text" 
+              id="product-name" 
+              name="product-name" 
+              placeholder="Enter product name" 
+              required
+            />
+
+            <!-- Product Category -->
+            <label for="product-category">Product Category:</label>
+            <select id="product-category" name="product-category" required>
+              <option value="">Select category</option>
+              <option value="electronics">Electronics</option>
+              <option value="clothing">Clothing</option>
+              <option value="furniture">Furniture</option>
+              <option value="other">Other</option>
+            </select>
+
+            <!-- Product Image -->
+            <label for="product-photo">Upload Product Image:</label>
+            <input
+              type="file"
+              id="product-photo"
+              name="product-photo"
+              accept="image/*"
+              required
+            />
+
+            <!-- Price -->
+            <label for="product-price">Price:</label>
+            <input
+              type="number"
+              id="product-price"
+              name="product-price"
+              placeholder="Enter product price"
+              step="0.01"
+              required
+            />
+
+            <!-- Description -->
+            <label for="product-description">Description:</label>
+            <textarea
+              id="product-description"
+              name="product-description"
+              placeholder="Enter product description"
+              rows="4"
+              required
+            ></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit" id="generate-btn">Generate QR Code</button>
+          </form>
+          <div id="qr-code-result"></div>
+        </div>
+
+        <!-- Sales Information Section -->
+        <div id="sales">
+          <h3>Product Sales</h3>
+          <p id="sales-count">Loading sales data...</p>
+        </div>
+      </main>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="hidden">
+      <p>Processing, please wait...</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../common/css/base.css" />
+    <link rel="stylesheet" href="./retailer.css" />
+    <script defer src="https://unpkg.com/jsqr/dist/jsQR.js"></script>
+    <script defer src="retailer.js"></script>
+    <script defer src="./qrscanneretailer.js"></script>
+    <title>Retailer Portal</title>
+  </head>
+  <body>
+    <!-- Navbar will be inserted here -->
+    <section id="retailerZone">
+      <div id="welcomeTe">
+        <h2>Welcome to the Retailer Portal</h2>
+        <p>
+          Manage your products, customers, and track sales here. Scan QR codes
+          to verify product authenticity and grant warranties to your customers.
+        </p>
+      </div>
+      <main id="retailerFunction">
+        <div id="scanProductsAndBatchOfProducts">
+          <h3>Verify Products</h3>
+          <p>Scan the QR code of your products to verify their authenticity.</p>
+          <button id="scanButton" aria-label="Scan QR Code">Scan QR</button>
+          <div id="scannerContainer" class="hidden">
+            <video id="cameraStream" autoplay></video>
+            <canvas id="qrCanvas" class="hidden"></canvas>
+            <button id="closeScanner">Close Scanner</button>
+          </div>
+          <div id="scanResult" class="hidden">
+            <p id="resultText"></p>
+          </div>
+        </div>
+        <div id="warrantyGranter">Grant warranty agreement to the customer</div>
+        <div id="seePreviousGrantedWarranties">
+          <p>See Previously Granted Warranties</p>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>

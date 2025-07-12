@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <link rel="stylesheet" href="../../common/css/base.css" />
+    <!-- <script src="../../common/components/navbar.js"></script> -->
+    <script src="./default.js" defer></script>
+    <link rel="stylesheet" href="default.css" />
+  </head>
+  <body>
+    <div id="staticQrScan" hidden>Scan Product</div>
+    <section id="productscanSection"></section>
+    <div class="container">
+      <h2>
+        Know your Product's <br />
+        genuineness
+      </h2>
+
+
+      <!-- Container for QR code scanning -->
+      <div id="reader" style="width: 300px; height: 300px"></div>
+      
+      <button id="productScan">Scan QR Code</button>
+      <div id="result"></div>
+    </div>
+      
+    </section>
+    <section id="productDetails" hidden>
+      <!-- product details will be shown here below read by the scanner from the product QR code -->
+      <div id="prodcutGenuinity">
+        <!-- show a message to indicate product genuineness -->
+        <!-- after receiving the product details response from the server -->
+        <!-- with details by which manufacturer is it made and -->
+        <!-- show the genuine or not able to verify logo for it -->
+      </div>
+      <div id="QrDetails">
+        <!-- show the QR details in the table format -->
+         <div id="buybutton">Buy</div>
+      </div>
+      <!-- here the user can rate the retailer product genunies and the manufatures too -->
+      <div id="rateReatilerAndManufacturer" hidden></div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+frontend/
+├── common/
+│   ├── css/
+│   │   ├── base.css
+│   │   ├── navbar.css
+│   │   └── sidebar.css
+│   ├── js/
+│   │   ├── api.js
+│   │   ├── utils.js
+│   │   └── auth.js
+│   └── components/
+│       ├── navbar.js
+│       └── sidebar.js
+├── modules/
+│   ├── login/
+│   │   ├── login.html
+│   │   ├── login.css
+│   │   └── login.js
+│   ├── default/
+│   │   ├── default.html
+│   │   ├── default.css
+│   │   └── default.js
+│   ├── retailer/
+│   │   ├── retailer.html
+│   │   ├── retailer.css
+│   │   └── retailer.js
+│   └── manufacturer/
+|   |__ generateQrcode.js
+|   |__ generateQrcode.html
+|   |__ generateQrcode.css
+│   ├── manufacturer.html
+│   ├── manufacturer.css
+│   └── manufacturer.js
+├
+└──favicon

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <header>
+        <h1><%= description %></h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    <section>
+        <div class="icon">
+            <div onclick="submitRole('Manufacturer')">
+                <img src="Manufacture-icon.png" alt="Manufacturer" height="200" width="150">
+                <h3>Manufacturer</h3>
+            </div>
+            <div onclick="submitRole('Retailer')">
+                <img src="retaierIcon3.jpg" alt="Retailer" height="200" width="150">
+                <h3>Retailer</h3>
+            </div>
+            <div onclick="submitRole('Buyer')">
+                <img src="buyer_icon.png" alt="Buyer" height="200" width="150">
+                <h3>Buyer</h3>
+            </div>
+        </div>
+    </section>
+    <footer>&copy; All rights reserved by Smart Technologies</footer>
+    <script src="/redirect.js"></script>
+</body>
+</html>

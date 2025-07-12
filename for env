@@ -1,0 +1,6 @@
+ADDR=0x596079E78C9035054AA9074763e375034CB5F2d0
+PRIVATE_KEY=0x8cb3716768ea4377e664e11531792526af17d1a0867fc861e1c11ecc0507224c
+#this is for the env fiels 
+# create the env fiel
+#and then change the priavetkey with 
+#privae key of the ganache provided account
